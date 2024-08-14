@@ -183,6 +183,7 @@ const dataStructureSelector = document.querySelector(
 );
 
 const operationsSelector = document.querySelector(".operation-selector > .buttons");
+const dataStructureLabel = document.querySelector(".result-window > h3.data-structure-name");
 const operationNameP = document.querySelector(".result-window > p.operation-name");
 const operationDescriptionP = document.querySelector(
   ".result-window > p.operation-description"
@@ -260,6 +261,7 @@ function renderOperations(dataStructure) {
 }
 
 function renderWindow(dataStructure, operation) {
+  dataStructureLabel.innerText = dataStructure.label
   operationNameP.innerText = operation.label;
   operationDescriptionP.innerText = operation.description;
 }
