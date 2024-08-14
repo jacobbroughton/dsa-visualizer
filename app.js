@@ -206,6 +206,8 @@ dataStructures.forEach((dataStructure) => {
     operationsSelector.innerHTML = "";
 
     selectedDataStructure = dataStructure;
+    selectedOperation = dataStructure.operations[0];
+    renderWindow(selectedDataStructure, selectedOperation)
 
     const dataStructureButtons = document.querySelectorAll(
       `.data-structures-selector > .buttons > button:not([data-structure-id='${selectedDataStructure.id}'])`
